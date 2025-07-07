@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
+  <title>EV Heart City</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/home.css">
+</head>
+
+<body>
+  <!-- ************************NAVBAR *********************** -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="assets/img/Heartcity_logo_removebg.png" alt="" ></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas-fa-stream navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <a class="nav-item nav-link" aria-current="page" href="#home">Home</a>
+          <a class="nav-item nav-link" href="#About">About</a>
+          <a class="nav-item nav-link" href="#Amenities">Amenities</a>
+          <a class="nav-item nav-link" href="#Features">Features</a>
+          <a class="nav-item nav-link" href="#Layout">Layout</a>
+          <a class="nav-item nav-link" href="#Contact Us">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get all navbar links
+      const navLinks = document.querySelectorAll('.nav-item.nav-link');
+      // Get the navbar collapse element
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+
+      // Add click event to each link
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          // Check if navbar is collapsed (mobile view)
+          if (window.getComputedStyle(document.querySelector('.navbar-toggler'))) {
+            // Close the navbar
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+              toggle: false
+            });
+            bsCollapse.hide();
+          }
+        });
+      });
+    });
+  </script>
+  <!-- ****************************Home Section**************** -->
+  <div id="home" class="video-container">
+
+    <video autoplay muted loop class="responsive-video" style="object-fit: cover;">
+      <source src="assets/img/starter.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <!-- *******************ABOUT SECTION******************** -->
+  <section id="About" class="hero-section" style="
+  background:  linear-gradient(45deg,  rgba(107, 106, 46, 0.742),rgba(17, 17, 16, 0.414)  ); background-color: rgba(52, 58, 64, 0.95) !important;
+    
+">
+
+    <div class="about-header">
+      <img src="assets/img/luxury-background-gold-gradient-design.png" width="70%" height="30px" loading="lazy"
+        alt="line1">
+      <p>ABOUT</p>
+      <img src="assets/img/luxury-background-gold-gradient-design.png" width="70%" height="30px" loading="lazy"
+        alt="line2">
+
+    </div>
+    <div class="about-main">
+      <div class="container position-relative" style="z-index: 2; ">
+
+        <div class="row ">
+          <div >
+            <h2 class="hero-title">EV Homes is a <span class="hero-experience">Multi National</span> Pan India Developer
+              </h1>
+              <h5 class="hero-subtitle mb-4">with Almost <div class="hero-experience-badge">35+ Years of Experience in
+                  Construction and MEP</div>
+            </h2>
+
+            <p class="hero-text" style="color: white;  text-align: justify; text-justify: inter-word;">
+              Powered by a group of Dedicated Engineers, the very same who
+              lighted up Palm Beach Road and also the very Engineers who were
+              the first to hand-over redevelopment projects in Vashi almost
+              a decade back. EV Homes has the unmatched record of not only
+              timely delivery and top quality construction but also an
+              unparalleled high rate of appreciation in every single project
+              delivered by us to date.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="aboutimg">
+        <img src="assets/img/abhut vector.png" width="420px" height="350px" loading="lazy" alt="line1">
+      </div>
+    </div>
+
+
+    <!-- </div> -->
+
+
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const video = document.getElementById('bg-video');
+      if (video) {
+        // Set playback rate to slow down (0.5 = half speed)
+        video.playbackRate = 0.9;
+
+        // Some browsers require this to make playbackRate work
+        video.addEventListener('loadedmetadata', function () {
+          video.playbackRate = 0.9;
+        });
+      }
+    });
+  </script>
+  <!-- **************************Amenities Section*********************** -->
+  <section id="Amenities" class="section amenity" 
+  style="
+  background:  linear-gradient(45deg,  rgba(107, 106, 46, 0.742),rgba(17, 17, 16, 0.414)  ); background-color: rgba(52, 58, 64, 0.95) !important;"
+  >
+<div style=" 
+  background: linear-gradient(to right, rgba(15, 14, 12, 0.752)),
+              url('assets/img/aboutimg.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+" >
+<div class="container">
+      <h1 class="section-title" style="padding-top: 40px;">LUXURIOUS AMENITIES</h1>
+
+      <ul class="amenity-list">
+        <!-- First Row - 3 items -->
+        <li class="w-33">
+          <a href="#" class="amenity-card">
+            <figure class="amenity-card-banner">
+              <img src="assets/img/swimming.jpg" width="1000" height="1100" loading="lazy" alt="Swimming Pool"
+                class="img-cover">
+            </figure>
+            <div class="amenity-card-content">
+              <h3 class="h3 amenity-card-title">Swimming Pool</h3>
+            </div>
+          </a>
+        </li>
+
+        <li class="w-33">
+          <a href="#" class="amenity-card">
+            <figure class="amenity-card-banner">
+              <img src="assets/img/gym.jfif" width="1140" height="1100" loading="lazy" alt="Gym" class="img-cover">
+            </figure>
+            <div class="amenity-card-content">
+              <h3 class="h3 amenity-card-title">Gym</h3>
+            </div>
+          </a>
+        </li>
+
+        <li class="w-33">
+          <a href="#" class="amenity-card">
+            <figure class="amenity-card-banner">
+              <img src="assets/img/KidPlayArea.jpg" width="1110" height="480" loading="lazy" alt="Kid's Play Area"
+                class="img-cover">
+            </figure>
+            <div class="amenity-card-content">
+              <h3 class="h3 amenity-card-title">Kid's Play Area</h3>
+            </div>
+          </a>
+        </li>
+
+        <!-- Second Row - 3 items -->
+        <li class="w-33">
+          <a href="#" class="amenity-card">
+            <figure class="amenity-card-banner">
+              <img src="assets/img/BasketballCourt.jpg" width="1140" height="1100" loading="lazy" alt="Basketball Court"
+                class="img-cover">
+            </figure>
+            <div class="amenity-card-content">
+              <h3 class="h3 amenity-card-title">Basketball Court</h3>
+            </div>
+          </a>
+        </li>
+
+        <li class="w-33">
+          <a href="#" class="amenity-card">
+            <figure class="amenity-card-banner">
+              <img src="assets/img/garden.jpg" width="1140" height="1100" loading="lazy" alt="Garden" class="img-cover">
+            </figure>
+            <div class="amenity-card-content">
+              <h3 class="h3 amenity-card-title">Garden</h3>
+            </div>
+          </a>
+        </li>
+
+        <li class="w-33">
+          <a href="#" class="amenity-card">
+            <figure class="amenity-card-banner">
+              <img src="assets/img/clubhouse.jpg" width="1110" height="480" loading="lazy" alt="Club House"
+                class="img-cover">
+            </figure>
+            <div class="amenity-card-content">
+              <h3 class="h3 amenity-card-title">Club House</h3>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+</div>
+    
+    <script>
+      // Add this to your existing JavaScript or in a script tag
+      document.addEventListener('DOMContentLoaded', function () {
+        // Function to check if element is in viewport
+        function isInViewport(element) {
+          const rect = element.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+
+        // Function to handle scroll events
+        function handleScroll() {
+          const sectionTitle = document.querySelector('.section-title');
+          const amenityItems = document.querySelectorAll('.amenity-list li');
+
+          if (isInViewport(sectionTitle) && !sectionTitle.classList.contains('animate')) {
+            sectionTitle.classList.add('animate');
+
+            // Animate amenity items after a slight delay
+            setTimeout(() => {
+              amenityItems.forEach(item => {
+                item.classList.add('animate');
+              });
+            }, 300);
+          }
+        }
+
+        // Initial check in case elements are already in view
+        handleScroll();
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+      });
+    </script>
+
+  </section>
+  <!-- ************************Features section*************************** -->
+  <div id="Features" class="features-section"
+    style=" position: relative; background:  linear-gradient(45deg, rgba(60, 60, 7, 0.742) , rgba(17, 17, 16, 0.414) );background-color: rgba(52, 58, 64, 0.95); width: 100%; padding: 20px 0 40px;">
+
+    <img src="assets/img/cctv-camera.png" class="float-img-3" alt="decoration">
+    <img src="assets/img/fire-extinguisher.png" class="float-img-2" alt="decoration">
+    <img src="assets/img/trash-can.png" class="float-img-1" alt="decoration">
+    <img src="assets/img/elevator.png" class="float-img-4" alt="decoration">
+    <img src="assets/img/24-hours.png" class="float-img-5" alt="decoration">
+        <img src="assets/img/parking-lot.png" class="float-img-6" alt="decoration">
+        <img src="assets/img/web.png" class="float-img-7" alt="decoration">
+
+
+    <div class="container" style="max-width: 1200px; padding: 0 15px; margin: 0 auto;">
+      <h1 class="section-title text-center mb-4" style="padding-bottom: 30px;">FEATURES</h1>
+
+
+      <div class="features-slider-container position-relative">
+        <!-- Slider Arrows -->
+        <button class="slider-arrow slider-prev" aria-label="Previous slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+
+        <button class="slider-arrow slider-next" aria-label="Next slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+
+        <!-- Slider -->
+        <div class="features-slider">
+
+          <!-- Slide 1 -->
+          <div class="features-slide">
+            <div class="feature-row">
+              <div class="feature-col">
+                <div class="feature-item">
+                  <img src="assets/img/lift.jpg" class="feature-item-img" alt="Branded Lift">
+                  <div class="feature-item-name">Branded Lift</div>
+                </div>
+              </div>
+
+              <div class="feature-col">
+                <div class="feature-item">
+                  <img src="assets/img/UndergroundWaterTank.jpg" class="feature-item-img" alt="Underground Water Tank">
+                  <div class="feature-item-name">Underground Water Tank</div>
+                </div>
+              </div>
+              <div class="feature-col">
+                <div class="feature-item">
+                  <img src="assets/img/FireFightingSystems.jpg" class="feature-item-img" alt="Fire Fighting Systems">
+                  <div class="feature-item-name">Fire Fighting Systems</div>
+                </div>
+              </div>
+              <div class="feature-col">
+                <div class="feature-item">
+                  <img src="assets/img/VaastuCompliant.jpg" class="feature-item-img" alt="Vaastu Compliant">
+                  <div class="feature-item-name">Vaastu Compliant</div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="features-slide">
+            <div class="feature-row">
+              <div class="feature-col">
+                <div class="feature-item">
+                  <img src="assets/img/parking design.jpg" class="feature-item-img" alt="Open Car Parking">
+                  <div class="feature-item-name">Ample Car Parking</div>
+                </div>
+              </div>
+
+              <div class="feature-col">
+                <div class="feature-item">
+                  <img src="assets/img/rainWater.jpg  " class="feature-item-img" alt="Rain Water Harvesting">
+                  <div class="feature-item-name">Rain Water Harvesting</div>
+                </div>
+              </div>
+              <div class="feature-col">
+                <div class="feature-item">
+                  <img src="assets/img/cctvCamera.jpg" class="feature-item-img" alt="CCTV Camera Security">
+                  <div class="feature-item-name">CCTV Camera Security</div>
+                </div>
+              </div>
+
+              <div class="feature-col">
+                <div class="feature-item">
+                  <img src="assets/img/PowerBackup.jpg" class="feature-item-img" alt="Power Backup for Lift">
+                  <div class="feature-item-name">Power Backup for Lift</div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="features-slide">
+            <div class="feature-row">
+              <div class="feature-col">
+                <div class="feature-item">
+                  <img src="assets/img/WaterSupply.jpg" class="feature-item-img" alt="24x7 Water Supply">
+                  <div class="feature-item-name">24x7 Water Supply</div>
+                </div>
+              </div>
+
+              <div class="feature-col">
+                <div class="feature-item">
+                  <img src="assets/img/WasteDisposal.jpg" class="feature-item-img" alt="Waste Disposal">
+                  <div class="feature-item-name">Waste Disposal</div>
+                </div>
+              </div>
+              <div class="feature-col">
+                <div class="feature-item">
+                  <img src="assets/img/maintenance_staff.jpg" class="feature-item-img" alt="Maintenance Staff">
+                  <div class="feature-item-name">Maintenance Staff</div>
+                </div>
+              </div>
+
+              <div class="feature-col">
+                <div class="feature-item">
+                  <img src="assets/img/SecurityPersonnel.jpg" class="feature-item-img" alt="Security Personnel">
+                  <div class="feature-item-name">Security Personnel</div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- Slider Dots -->
+        <div class="slider-dots-container" style="padding: 20px 0;">
+          <button class="slider-dot active" aria-label="Go to slide 1"></button>
+          <button class="slider-dot" aria-label="Go to slide 2"></button>
+          <button class="slider-dot" aria-label="Go to slide 3"></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- *****************MobileFeatures Section********************* -->
+  <section id="Features" class="mobileFeatures">
+    <div class="main-features">
+      <!-- <div class="main-hearder">
+        <hr class="line">
+        <div class="Features-header">FEATURES</div>
+        <hr class="line">
+      </div> -->
+      <div class="about-header">
+      <img src="assets/img/luxury-background-gold-gradient-design.png" width="70%" height="30px" loading="lazy"
+        alt="line1">
+      <p>FEATURES</p>
+      <img src="assets/img/luxury-background-gold-gradient-design.png" width="70%" height="30px" loading="lazy"
+        alt="line2">
+
+    </div>
+      <div class="features-body">
+        <div class="fist-Features">
+          <div class="col-Feat">
+            <img src="assets/img/water.png" alt="icon" style="width: 10vw; height: 5vh;">
+            <p class="Features-text">Water Tank</p>
+          </div>
+          <div class="col-Feat">
+            <img src="assets/img/lift.png" alt="icon" style="width: 10vw; height: 5vh;">
+            <p class="Features-text">Lift</p>
+          </div>
+
+          <div class="col-Feat">
+            <img src="assets/img/extinguisher.png" alt="icon" style="width: 10vw; height: 5vh;">
+            <p class="Features-text">Fire Safety</p>
+          </div>
+        </div>
+        <div class="fist-Features">
+          <div class="col-Feat">
+            <img src="assets/img/compass.png" alt="icon" style="width: 10vw; height: 5vh;">
+            <p class="Features-text">Vaastu Compliant</p>
+          </div>
+          <div class="col-Feat">
+            <img src="assets/img/parking.png" alt="icon" style="width: 10vw; height: 5vh;">
+            <p class="Features-text">Parking</p>
+          </div>
+          <div class="col-Feat">
+            <img src="assets/img/rain-water.png" alt="icon" style="width: 10vw; height: 5vh;">
+            <p class="Features-text">RWH System</p>
+          </div>
+        </div>
+        <div class="fist-Features">
+          <div class="col-Feat">
+            <img src="assets/img/camera.png" alt="icon" style="width: 10vw; height: 5vh;">
+            <p class="Features-text">CCTV Camera</p>
+          </div>
+          <div class="col-Feat">
+            <img src="assets/img/battery-repair.png" alt="icon" style="width: 10vw; height: 5vh;">
+            <p class="Features-text">Power Backup</p>
+          </div>
+          <div class="col-Feat">
+            <img src="assets/img/waste-water.png" alt="icon" style="width: 10vw; height: 5vh;">
+            <p class="Features-text">24x7 Water</p>
+          </div>
+        </div>
+        <div class="fist-Features">
+          <div class="col-Feat">
+            <img src="assets/img/trash.png" alt="icon" style="width: 10vw; height: 5vh;">
+            <p class="Features-text">Waste Disposal</p>
+          </div>
+          <div class="col-Feat">
+            <img src="assets/img/employees.png" alt="icon" style="width: 10vw; height: 5vh;">
+            <p class="Features-text">Staff</p>
+          </div>
+          <div class="col-Feat">
+            <img src="assets/img/security-guard.png" alt="icon" style="width: 10vw; height: 5vh;">
+            <p class="Features-text">Security</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <!-- *************************Layout Section***************** -->
+  <section id="Layout" class="container-fluid mt-0 " style="
+    background: linear-gradient(rgba(31, 30, 1, 0.742) , rgba(17, 17, 16, 0.37)),
+
+                url('assets/img/Heart\ City.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+">
+    <div class="container">
+      <h2 class="section-title text-center " style=" font-weight: 700; letter-spacing: 1px;">
+        LAYOUT OPTIONS</h2>
+
+      <div class="row justify-content-center">
+        <!-- The Sagar Ratna Card -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 layout-card" style="
+                    background:  linear-gradient(45deg, rgba(48, 48, 0, 0.822) , rgba(0, 0, 0, 0.901) );
+                    border: 2px solid #ffc107;
+                    border-radius: 15px;
+                ">
+            <div class="card-body p-4">
+              <div class="card-content">
+                <h3 class="layout-title" style="color: #fff;  font-weight: 600; margin-bottom: 0.5rem;">
+                  The Sagar Ratna</h3>
+                <h3 class="mb-3" style="color: #ffc107;  font-weight: 700;">2 BHK</h3>
+                <div class="price-container">2.10 CRORES ALL IN</div>
+
+                <ul class="list-unstyled" style="margin-bottom: 1.5rem;">
+                  <li class="mb-2" style="color: #ddd; font-size: 1rem;">
+                    <span
+                      style="display: inline-block; width: 22px; height: 22px; background-color: #ffc107; color: black; border-radius: 50%; text-align: center; line-height: 22px; margin-right: 8px;">✓</span>
+                    LIMITED EDITION SEA-FACING 2 BHK
+                  </li>
+                  <li class="mb-2" style="color: #ddd; font-size: 1rem;">
+                    <span
+                      style="display: inline-block; width: 22px; height: 22px; background-color: #ffc107; color: black; border-radius: 50%; text-align: center; line-height: 22px; margin-right: 8px;">✓</span>
+                    SEA FACING SUNSET DECK
+                  </li>
+                  <li class="mb-2" style="color: #ddd; font-size: 1rem;">
+                    <span
+                      style="display: inline-block; width: 22px; height: 22px; background-color: #ffc107; color: black; border-radius: 50%; text-align: center; line-height: 22px; margin-right: 8px;">✓</span>
+                    LARGE EN-SUITE BEDROOMS
+                  </li>
+                  <li class="mb-2" style="color: #ddd; font-size: 1rem;">
+                    <span
+                      style="display: inline-block; width: 22px; height: 22px; background-color: #ffc107; color: black; border-radius: 50%; text-align: center; line-height: 22px; margin-right: 8px;">✓</span>
+                    SEPARATE KITCHEN & EXCLUSIVE DINING
+                  </li>
+                </ul>
+              </div>
+
+              <div class="btn-container">
+                <button class="btn w-100 silver-hover" style="
+                       background-color: transparent;
+                       color: #ffc107;
+                       border: 2px solid #ffc107;
+                       border-radius: 25px;
+                       padding: 0.5rem 1.5rem;
+                       font-weight: 600;
+                       letter-spacing: 0.5px;
+                       ">View Layout 🔍</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Sagar Nivas Card -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 layout-card" style="
+                    background:  linear-gradient(45deg, rgba(48, 48, 0, 0.822) , rgba(0, 0, 0, 0.901) );
+                    border: 2px solid #ffc107;
+                    border-radius: 15px;
+                ">
+            <div class="card-body p-4">
+              <div class="card-content">
+                <h3 class="layout-title" style="color: #fff;  font-weight: 600; margin-bottom: 0.5rem;">
+                  The Sagar Nivas</h3>
+                <h3 class="mb-3" style="color: #ffc107;  font-weight: 700;">3 BHK</h3>
+                <div class="price-container">2.10 CRORES ALL IN</div>
+
+                <ul class="list-unstyled" style="margin-bottom: 1.5rem;">
+                  <li class="mb-2" style="color: #ddd; font-size: 1rem;">
+                    <span
+                      style="display: inline-block; width: 22px; height: 22px; background-color: #ffc107; color: black; border-radius: 50%; text-align: center; line-height: 22px; margin-right: 8px;">✓</span>
+                    LIMITED EDITION SEA-FACING 3 BHK
+                  </li>
+                  <li class="mb-2" style="color: #ddd; font-size: 1rem;">
+                    <span
+                      style="display: inline-block; width: 22px; height: 22px; background-color: #ffc107; color: black; border-radius: 50%; text-align: center; line-height: 22px; margin-right: 8px;">✓</span>
+                    EXTRA LARGE SEA FACING SUNSET DECK
+                  </li>
+                  <li class="mb-2" style="color: #ddd; font-size: 1rem;">
+                    <span
+                      style="display: inline-block; width: 22px; height: 22px; background-color: #ffc107; color: black; border-radius: 50%; text-align: center; line-height: 22px; margin-right: 8px;">✓</span>
+                    LARGE EN-SUITE BEDROOMS
+                  </li>
+                  <li class="mb-2" style="color: #ddd; font-size: 1rem;">
+                    <span
+                      style="display: inline-block; width: 22px; height: 22px; background-color: #ffc107; color: black; border-radius: 50%; text-align: center; line-height: 22px; margin-right: 8px;">✓</span>
+                    SEPARATE KITCHEN & EXCLUSIVE DINING
+                  </li>
+                </ul>
+              </div>
+
+              <div class="btn-container">
+                <button class="btn w-100 silver-hover" style="
+                       background-color: transparent;
+                       color: #ffc107;
+                       border: 2px solid #ffc107;
+                       border-radius: 25px;
+                       padding: 0.5rem 1.5rem;
+                       font-weight: 600;
+                       letter-spacing: 0.5px;
+                       ">View Layout 🔍</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Anant Sagar Card -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 layout-card" style="
+                    background:  linear-gradient(45deg, rgba(48, 48, 0, 0.822) , rgba(0, 0, 0, 0.901) );
+                    border: 2px solid #ffc107;
+                    border-radius: 15px;
+                ">
+            <div class="card-body p-4">
+              <div class="card-content">
+                <h3 class="layout-title" style="color: #fff;  font-weight: 600; margin-bottom: 0.5rem;">
+                  The Anant Sagar</h3>
+                <h3 class="mb-3" style="color: #ffc107; font-weight: 700;">3 BHK</h3>
+                <div class="price-container">2.10 CRORES ALL IN</div>
+
+                <ul class="list-unstyled" style="margin-bottom: 1.5rem;">
+                  <li class="mb-2" style="color: #ddd; font-size: 1rem;">
+                    <span
+                      style="display: inline-block; width: 22px; height: 22px; background-color: #ffc107; color: black; border-radius: 50%; text-align: center; line-height: 22px; margin-right: 8px;">✓</span>
+                    LIMITED EDITION SEA-FACING LARGE 3 BHK
+                  </li>
+                  <li class="mb-2" style="color: #ddd; font-size: 1rem;">
+                    <span
+                      style="display: inline-block; width: 22px; height: 22px; background-color: #ffc107; color: black; border-radius: 50%; text-align: center; line-height: 22px; margin-right: 8px;">✓</span>
+                    EXCLUSIVE VILLA STYLE ENTRANCE
+                  </li>
+                  <li class="mb-2" style="color: #ddd; font-size: 1rem;">
+                    <span
+                      style="display: inline-block; width: 22px; height: 22px; background-color: #ffc107; color: black; border-radius: 50%; text-align: center; line-height: 22px; margin-right: 8px;">✓</span>
+                    HUGE LIVING AREA WITH SUN-DECK
+                  </li>
+                  <li class="mb-2" style="color: #ddd; font-size: 1rem;">
+                    <span
+                      style="display: inline-block; width: 22px; height: 22px; background-color: #ffc107; color: black; border-radius: 50%; text-align: center; line-height: 22px; margin-right: 8px;">✓</span>
+                    LARGE EN-SUITE BEDROOMS
+                  </li>
+                  <li class="mb-2" style="color: #ddd; font-size: 1rem;">
+                    <span
+                      style="display: inline-block; width: 22px; height: 22px; background-color: #ffc107; color: black; border-radius: 50%; text-align: center; line-height: 22px; margin-right: 8px;">✓</span>
+                    SEPARATE KITCHEN & EXCLUSIVE DINING
+                  </li>
+                </ul>
+              </div>
+
+              <div class="btn-container">
+                <button class="btn w-100 silver-hover" style="
+                       background-color: transparent;
+                       color: #ffc107;
+                       border: 2px solid #ffc107;
+                       border-radius: 25px;
+                       padding: 0.5rem 1.5rem;
+                       font-weight: 600;
+                       letter-spacing: 0.5px;
+                       ">View Layout 🔍</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script>document.addEventListener('DOMContentLoaded', function () {
+        // Function to check if element is in viewport (with threshold)
+        function isInViewport(element, threshold = 0.2) {
+          const rect = element.getBoundingClientRect();
+          const viewHeight = window.innerHeight || document.documentElement.clientHeight;
+          return (
+            rect.top <= viewHeight * (1 - threshold) &&
+            rect.bottom >= 0
+          );
+        }
+
+        // Function to handle scroll events
+        function handleScroll() {
+          // Layout Section
+          const layoutSection = document.getElementById('Layout');
+          if (layoutSection && isInViewport(layoutSection)) {
+            const layoutTitle = layoutSection.querySelector('.section-title');
+            const layoutCards = layoutSection.querySelectorAll('.card');
+
+            if (layoutTitle && !layoutTitle.classList.contains('animate')) {
+              layoutTitle.classList.add('animate');
+
+              setTimeout(() => {
+                layoutCards.forEach((card, index) => {
+                  setTimeout(() => {
+                    card.classList.add('animate');
+                  }, index * 300); // Staggered delay
+                });
+              }, 300);
+            }
+          }
+
+          // Footer Section
+          const footer = document.querySelector('.footer');
+          if (footer && isInViewport(footer, 0.1) && !footer.classList.contains('animate')) {
+            footer.classList.add('animate');
+          }
+        }
+
+        // Initial check in case elements are already in view
+        handleScroll();
+
+        // Add scroll event listener with debounce
+        let isScrolling;
+        window.addEventListener('scroll', function () {
+          clearTimeout(isScrolling);
+          isScrolling = setTimeout(handleScroll, 50);
+        }, false);
+      });
+    </script>
+  </section>
+
+  <!-- ***********************Footer************************* -->
+  <footer id="Contact Us" class="footer" style="position: relative; overflow: hidden; padding: 60px 0;">
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline class="footer-video-bg">
+      <source src="assets/img/footer.mp4" type="video/mp4">
+      <!-- Fallback image if video doesn't load -->
+      <img src="assets/img/footer-fallback.jpg" alt="Footer background"
+        style="width: 100%; height: 100%; object-fit: cover;">
+    </video>
+
+    <!-- Dark overlay for better text visibility -->
+    <div class="video-overlay"></div>
+
+    <!-- Content Container -->
+    <div class="container position-relative" style="z-index: 2; color: white;">
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center mb-4">
+          <img src="assets/img/Heartcity_logo_removebg.png" alt="Heart City Logo" width="270">
+        </div>
+
+        <!-- Site Address Section -->
+        <div class="col-md-3">
+          <div class="address-section h-100 text-center">
+            <div class="section-icon mb-3">
+              <img src="assets/img/office-building.png" alt="Site Address" width="40">
+            </div>
+            <h5 class="address-title mb-3" style="color: #f8b400;">Site Address</h5>
+            <div class="address-details">
+              <div class="address-item mb-3">
+                <div>
+                  <p class="address-text"><strong>Plot 53 & 54/1C</strong></p>
+                </div>
+              </div>
+              <div class="address-item mb-3">
+                <div>
+                  <p class="address-text">Village - MOSARE</p>
+                </div>
+              </div>
+              <div class="address-item mb-3">
+                <div>
+                  <p class="address-text">Tehsil - PANVEL</p>
+                </div>
+              </div>
+              <div class="address-item">
+                <div>
+                  <p class="address-text">District - RAIGAD</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 d-md-none my-3">
+          <div style="width: 100%; height: 2px; background-color: #f8b400;"></div>
+        </div>
+
+        <!-- Vertical Divider -->
+        <div class="col-auto px-0 d-none d-md-flex align-items-center">
+          <div style="width: 2px; height: 80%; background-color: #f8b400;"></div>
+        </div>
+
+        <!-- Office Address Section -->
+        <div class="col-md-4">
+          <div class="address-section h-100 text-center">
+            <div class="section-icon mb-3">
+              <img src="assets/img/location.png" alt="Office Address" width="40">
+            </div>
+            <h5 class="address-title mb-3" style="color: #f8b400;">Office Address</h5>
+            <div class="address-content">
+              <div class="address-item">
+                <div>
+                  <p class="address-text">212, Awing, Vardhman Chambers</p>
+                </div>
+              </div>
+              <div class="address-item">
+                <div>
+                  <p class="address-text">Above Axis Bank</p>
+                </div>
+              </div>
+              <div class="address-item">
+                <div>
+                  <p class="address-text">Sector-17, Vashi, Navi Mumbai</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 d-md-none my-3">
+          <div style="width: 100%; height: 2px; background-color: #f8b400;"></div>
+        </div>
+
+        <!-- Vertical Divider -->
+        <div class="col-auto px-0 d-none d-md-flex align-items-center">
+          <div style="width: 2px; height: 80%; background-color: #f8b400;"></div>
+        </div>
+
+        <!-- For Sales Section -->
+        <div class="col-md-4">
+          <div class="contact-info h-100 text-center">
+            <h5 class="address-title mb-3" style="color: #f8b400;">For Sales</h5>
+            <div class="contact-content">
+              <div class="contact-item mb-3">
+                <div class="icon-wrapper mb-1">
+                  <img src="assets/img/website.png" alt="Website" width="24">
+                </div>
+                <div>
+                  <a href="http://www.evgroup.in" target="_blank" style="color: white;">www.evgroup.in</a>
+                </div>
+              </div>
+              <div class="contact-item mb-3">
+                <div class="icon-wrapper mb-1">
+                  <img src="assets/img/telephone.png" alt="Phone" width="24">
+                </div>
+                <div>
+                  <span>8879342777 | 8991068777</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="icon-wrapper mb-1">
+                  <img src="assets/img/mail.png" alt="Email" width="24">
+                </div>
+                <div>
+                  <a href="mailto:marketing@evheartcity.com" style="color: white;">marketing@evheartcity.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript to make navbar solid when scrolling -->
+  <script>
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 0) {
+        document.querySelector('.navbar').classList.add('scrolled');
+      } else {
+        document.querySelector('.navbar').classList.remove('scrolled');
+      }
+    });
+  </script>
+  <script>
+    // Animate when the About section comes into view
+    document.addEventListener('DOMContentLoaded', function () {
+      const aboutSection = document.querySelector('#About');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const title = entry.target.querySelector('.hero-title');
+            const subtitle = entry.target.querySelector('.hero-subtitle');
+            const text = entry.target.querySelector('.hero-text');
+
+            // Add animate class to each element with slight delay between them
+            setTimeout(() => title.classList.add('animate'), 200);
+            setTimeout(() => subtitle.classList.add('animate'), 400);
+            setTimeout(() => text.classList.add('animate'), 600);
+
+            // Stop observing after animation triggers
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.2, // Trigger when 20% of section is visible
+        rootMargin: '0px 0px -100px 0px' // Adjust this to trigger animation earlier/later
+      });
+
+      observer.observe(aboutSection);
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Function to check if element is in viewport
+      function isInViewport(element, threshold = 0.2) {
+        const rect = element.getBoundingClientRect();
+        const viewHeight = window.innerHeight || document.documentElement.clientHeight;
+        return (
+          rect.top <= viewHeight * (1 - threshold) &&
+          rect.bottom >= 0
+        );
+      }
+
+      // Function to handle scroll events
+      function handleScroll() {
+        // Features Section
+        const featuresSection = document.getElementById('Features');
+        if (featuresSection && isInViewport(featuresSection)) {
+          const featuresTitle = featuresSection.querySelector('.section-title');
+          const featureItems = featuresSection.querySelectorAll('.feature-item');
+
+          if (featuresTitle && !featuresTitle.classList.contains('animate')) {
+            featuresTitle.classList.add('animate');
+
+            // Animate feature items with staggered delay
+            featureItems.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add('animate');
+              }, index * 200); // 200ms delay between each item
+            });
+          }
+        }
+
+
+        // Footer Section
+        const footer = document.querySelector('.footer');
+        if (footer && isInViewport(footer, 0.1) && !footer.classList.contains('animate')) {
+          footer.classList.add('animate');
+        }
+      }
+
+      // Initial check in case elements are already in view
+      handleScroll();
+
+      // Add scroll event listener with debounce
+      let isScrolling;
+      window.addEventListener('scroll', function () {
+        clearTimeout(isScrolling);
+        isScrolling = setTimeout(handleScroll, 50);
+      }, false);
+    });
+  </script>
+
+  <script>
+    // Slider functionality
+    // Slider functionality with auto-slide and manual controls
+    document.addEventListener('DOMContentLoaded', function () {
+      const slider = document.querySelector('.features-slider');
+      const slides = document.querySelectorAll('.features-slide');
+      const dots = document.querySelectorAll('.slider-dot');
+      const prevBtn = document.querySelector('.slider-prev');
+      const nextBtn = document.querySelector('.slider-next');
+
+      let currentSlide = 0;
+      let autoSlideInterval;
+      const slideCount = slides.length;
+      const slideDuration = 5000; // 5 seconds
+
+      // Initialize slider
+      function updateSlider() {
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        // Update dots
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentSlide);
+        });
+
+        // Animate features when slide is visible
+        const currentSlideItems = slides[currentSlide].querySelectorAll('.feature-item');
+        currentSlideItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add('animate');
+          }, index * 100);
+        });
+      }
+
+      // Next slide
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slideCount;
+        updateSlider();
+      }
+
+      // Previous slide
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+        updateSlider();
+      }
+
+      // Go to specific slide
+      function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+      }
+
+      // Auto slide
+      function startAutoSlide() {
+        stopAutoSlide(); // Clear any existing interval
+        autoSlideInterval = setInterval(nextSlide, slideDuration);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+      }
+
+      // Event listeners
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        startAutoSlide();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        startAutoSlide();
+      });
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          goToSlide(index);
+          startAutoSlide();
+        });
+      });
+
+      // Pause auto slide on hover
+      slider.addEventListener('mouseenter', stopAutoSlide);
+      slider.addEventListener('mouseleave', startAutoSlide);
+
+      // Initialize
+      updateSlider();
+      startAutoSlide();
+
+      // Touch support for mobile devices
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      slider.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      slider.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, { passive: true });
+
+      function handleSwipe() {
+        const difference = touchStartX - touchEndX;
+        if (difference > 50) { // Swipe left
+          nextSlide();
+        } else if (difference < -50) { // Swipe right
+          prevSlide();
+        }
+        startAutoSlide();
+      }
+    });
+  </script>
+
+
+
+  <a href="#home" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const backTopBtn = document.querySelector("[data-back-top-btn]");
+
+      window.addEventListener("scroll", function () {
+        // Navbar scroll effect
+        if (window.scrollY > 0) {
+          document.querySelector('.navbar').classList.add('scrolled');
+        } else {
+          document.querySelector('.navbar').classList.remove('scrolled');
+        }
+
+        // Back to top button visibility
+        if (window.scrollY > 300) {
+          backTopBtn.classList.add("active");
+        } else {
+          backTopBtn.classList.remove("active");
+        }
+      });
+
+      // Add click handler for the button
+      backTopBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
