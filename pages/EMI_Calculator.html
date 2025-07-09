@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/home.css">
+<link rel="stylesheet" href="../assets/EMI.css">
+  <title>Premium EMI Calculator - Heartcity</title>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="../assets/img/Heartcity_logo_removebg.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas-fa-stream navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <a class="nav-item nav-link" aria-current="page" href="../Index.html">Home</a>
+          <a class="nav-item nav-link" href="../Index.html#About">About</a>
+          <a class="nav-item nav-link" href="../Index.html#Amenities">Amenities</a>
+          <a class="nav-item nav-link" href="../Index.html#Features">Features</a>
+          <a class="nav-item nav-link" href="../Index.html#Layout">Layout</a>
+          <a class="nav-item nav-link" href="../Index.html#Contact Us">Contact Us</a>
+                    <a class="nav-item nav-link" href="">EMI Calculator</a>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="calculator-container">
+      <!-- <div class="calculator-header">
+        <h2><i class="fas fa-calculator me-2"></i> Premium EMI Calculator</h2>
+        <p class="lead mb-0">Plan your home loan with our advanced EMI calculator</p>
+      </div> -->
+      
+      <div class="calculator-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="input-card">
+              <div class="input-card-header">
+                <div class="input-card-icon">
+                  <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <h4 class="input-card-title">Loan Details</h4>
+              </div>
+              
+              <div class="input-group">
+                <label for="loanAmount">Loan Amount (₹)</label>
+                <input type="text" class="input-field" id="loanAmountInput" value="25,00,000">
+                <div class="input-row mt-2">
+                  <input type="range" class="range-slider" id="loanAmountSlider" min="100000" max="100000000" step="50000" value="2500000">
+                  <div class="range-value" id="loanAmountValue">₹25,00,000</div>
+                </div>
+              </div>
+              
+              <div class="input-group">
+                <label for="interestRate">Interest Rate (% per annum) <i class="fas fa-info-circle info-icon" title="Current market rate for home loans"></i></label>
+                <div class="input-row">
+                  <input type="range" class="range-slider" id="interestRateSlider" min="0.5" max="15" step="0.1" value="8.5">
+                  <div class="range-value" id="interestRateValue">8.5%</div>
+                </div>
+              </div>
+              
+              <div class="input-group">
+                <label for="loanTenure">Loan Tenure (years)</label>
+                <div class="input-row">
+                  <input type="range" class="range-slider" id="loanTenureSlider" min="1" max="30" step="1" value="20">
+                  <div class="range-value" id="loanTenureValue">20 years</div>
+                </div>
+              </div>
+            </div>
+            
+            <button id="calculateBtn" class="btn btn-primary btn-calculate">
+              <i class="fas fa-calculator me-2"></i> Calculate EMI
+            </button>
+            
+            <div class="chart-container">
+              <h5 class="text-center mb-3">Payment Breakdown</h5>
+              <canvas id="donutChart" class="chart-canvas"></canvas>
+              <div class="chart-legend">
+                <div class="legend-item">
+                  <div class="legend-color" style="background-color: rgb(205, 205, 255)"></div>
+                  <span style="color: black;">Principal</span>
+                </div>
+                <div class="legend-item">
+                  <div class="legend-color" style="background-color: blue;"></div>
+                  <span style="color: black;">Interest</span>
+                </div>
+              </div>
+            </div>
+            <canvas id="comparisonChart" class="chart-canvas"></canvas>
+        
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="result-container">
+              <h3 class="text-center mb-4">Payment Summary</h3>
+              
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="result-box">
+                    <div class="result-title">Monthly EMI</div>
+                    <div class="result-value" id="emiResult">₹24,718</div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="result-box">
+                    <div class="result-title">Total Interest</div>
+                    <div class="result-value" id="totalInterest">₹34,32,320</div>
+                  </div>
+                </div>
+              </div>
+              
+              <ul class="nav nav-tabs" id="summaryTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="summary-tab" data-bs-toggle="tab" data-bs-target="#summary" type="button" role="tab">Summary</button>
+                </li>
+               
+              </ul>
+              
+              <div class="tab-content" id="summaryTabContent">
+                <div class="tab-pane fade show active" id="summary" role="tabpanel">
+                  <div class="summary-box">
+                    <div class="summary-item">
+                      <span>Loan Amount</span>
+                      <span id="summaryLoan">₹25,00,000</span>
+                    </div>
+                    <div class="summary-item">
+                      <span>Interest Rate</span>
+                      <span id="summaryRate">8.5%</span>
+                    </div>
+                    <div class="summary-item">
+                      <span>Loan Tenure</span>
+                      <span id="summaryTenure">20 years</span>
+                    </div>
+                    <div class="summary-item">
+                      <span>Total Payment</span>
+                      <span id="summaryTotal">₹59,32,320</span>
+                    </div>
+                  </div>
+                </div>
+                
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-EMI">
+      <p>© 2023 Heartcity Properties. All rights reserved.</p>
+      <p class="mb-0">This calculator provides estimates only. Actual payments may vary based on additional factors.</p>
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all slider elements
+      const loanAmountSlider = document.getElementById('loanAmountSlider');
+      const interestRateSlider = document.getElementById('interestRateSlider');
+      const loanTenureSlider = document.getElementById('loanTenureSlider');
+      
+      // Get all input elements
+      const loanAmountInput = document.getElementById('loanAmountInput');
+      
+      // Get all value display elements
+      const loanAmountValue = document.getElementById('loanAmountValue');
+      const interestRateValue = document.getElementById('interestRateValue');
+      const loanTenureValue = document.getElementById('loanTenureValue');
+      
+      // Get result elements
+      const emiResult = document.getElementById('emiResult');
+      const totalInterest = document.getElementById('totalInterest');
+      
+      // Get summary elements
+      const summaryLoan = document.getElementById('summaryLoan');
+      const summaryRate = document.getElementById('summaryRate');
+      const summaryTenure = document.getElementById('summaryTenure');
+      const summaryTotal = document.getElementById('summaryTotal');
+      
+      // Chart variables
+      let donutChart = null;
+      let comparisonChart = null;
+      const ctx = document.getElementById('donutChart').getContext('2d');
+      const ctxComparison = document.getElementById('comparisonChart').getContext('2d');
+      
+      // Format currency in Indian Rupees
+      function formatCurrency(amount) {
+        return new Intl.NumberFormat('en-IN', {
+          maximumFractionDigits: 0
+        }).format(amount);
+      }
+      
+      // Parse formatted currency back to number
+      function parseFormattedCurrency(value) {
+        return parseFloat(value.replace(/,/g, ''));
+      }
+      
+      // Update slider values display
+      function updateSliderValues() {
+        // Update display values
+        loanAmountValue.textContent = '₹' + formatCurrency(loanAmountSlider.value);
+        interestRateValue.textContent = interestRateSlider.value + '%';
+        loanTenureValue.textContent = loanAmountSlider.value > 10000000 ? 
+          loanTenureSlider.value + ' years' : 
+          loanTenureSlider.value + ' years';
+        
+        // Update input fields
+        loanAmountInput.value = formatCurrency(loanAmountSlider.value);
+        
+        // Update summary
+        summaryLoan.textContent = '₹' + formatCurrency(loanAmountSlider.value);
+        summaryRate.textContent = interestRateSlider.value + '%';
+        summaryTenure.textContent = loanTenureSlider.value + ' years';
+      }
+      
+      // Initialize donut chart
+      function initDonutChart(principal, interest) {
+        if (donutChart) {
+          donutChart.destroy();
+        }
+        
+        donutChart = new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Principal', 'Interest'],
+            datasets: [{
+              data: [principal, interest],
+              backgroundColor: [
+                  'rgb(205, 205, 255)' ,
+                'blue',   
+                
+              ],
+              borderColor: [
+                '#ffffff',
+                '#ffffff'
+              ],
+              borderWidth: 2
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                display: false
+              },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    const label = context.label || '';
+                    const value = context.raw || 0;
+                    return `${label}: ₹${formatCurrency(value)}`;
+                  }
+                }
+              }
+            },
+            cutout: '65%',
+            animation: {
+              animateRotate: true,
+              animateScale: true
+            }
+          }
+        });
+      }
+      
+      // Initialize comparison chart
+      function initComparisonChart(emi, tenure) {
+        if (comparisonChart) {
+          comparisonChart.destroy();
+        }
+        
+        // Generate data for different tenures
+        const labels = [];
+        const emiData = [];
+        const interestData = [];
+        
+        for (let t = 5; t <= 30; t += 5) {
+          labels.push(`${t} years`);
+          
+          // Calculate EMI for this tenure
+          const loanAmount = parseFloat(loanAmountSlider.value);
+          const interestRate = parseFloat(interestRateSlider.value);
+          const monthlyRate = interestRate / 12 / 100;
+          const months = t * 12;
+          
+          const emiValue = loanAmount * monthlyRate * Math.pow(1 + monthlyRate, months) / 
+                         (Math.pow(1 + monthlyRate, months) - 1);
+          
+          emiData.push(emiValue);
+          
+          // Calculate total interest
+          const totalInterest = emiValue * months - loanAmount;
+          interestData.push(totalInterest);
+        }
+        
+ 
+      }
+      
+      // Calculate EMI
+      function calculateEMI() {
+        const loanAmount = parseFloat(loanAmountSlider.value);
+        const interestRate = parseFloat(interestRateSlider.value);
+        const loanTenure = parseFloat(loanTenureSlider.value);
+        
+        // Monthly interest rate
+        const monthlyRate = interestRate / 12 / 100;
+        
+        // Loan tenure in months
+        const months = loanTenure * 12;
+        
+        // Calculate EMI using formula
+        const emi = loanAmount * monthlyRate * Math.pow(1 + monthlyRate, months) / 
+                   (Math.pow(1 + monthlyRate, months) - 1);
+        
+        // Calculate total amount payable and interest
+        const totalPayable = emi * months;
+        const totalInterestAmount = totalPayable - loanAmount;
+        
+        // Update results
+        emiResult.textContent = '₹' + formatCurrency(emi.toFixed(0));
+        totalInterest.textContent = '₹' + formatCurrency(totalInterestAmount.toFixed(0));
+        summaryTotal.textContent = '₹' + formatCurrency(totalPayable.toFixed(0));
+        
+        // Add animation to result boxes
+        document.querySelectorAll('.result-box').forEach(box => {
+          box.classList.add('pulse');
+          setTimeout(() => box.classList.remove('pulse'), 500);
+        });
+        
+        // Update donut chart
+        initDonutChart(loanAmount, totalInterestAmount);
+        
+        // Update comparison chart
+        initComparisonChart(emi, loanTenure);
+      }
+      
+      // Initialize slider values
+      updateSliderValues();
+      calculateEMI();
+      
+      // Add event listeners to sliders
+      loanAmountSlider.addEventListener('input', function() {
+        updateSliderValues();
+        calculateEMI();
+      });
+      
+      interestRateSlider.addEventListener('input', function() {
+        updateSliderValues();
+        calculateEMI();
+      });
+      
+      loanTenureSlider.addEventListener('input', function() {
+        updateSliderValues();
+        calculateEMI();
+      });
+      
+      // Add event listeners to input fields
+      loanAmountInput.addEventListener('input', function() {
+        // Parse and validate input
+        let value = parseFormattedCurrency(loanAmountInput.value) || 0;
+        value = Math.max(parseInt(loanAmountSlider.min), Math.min(parseInt(loanAmountSlider.max), value));
+        
+        // Update slider and values
+        loanAmountSlider.value = value;
+        updateSliderValues();
+        calculateEMI();
+      });
+      
+      // Add event listener to calculate button
+      document.getElementById('calculateBtn').addEventListener('click', calculateEMI);
+      
+      // Initialize tooltips
+      const tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+</body>
+</html>
