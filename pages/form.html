@@ -32,7 +32,7 @@
 
       <h2>Contact Form</h2>
 
-      <form id="contact-form">
+      <form id="contact-form" action="https://formsubmit.co/your-email@example.com" method="POST">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" placeholder="Enter your name" required>
@@ -48,7 +48,6 @@
           <input type="email" id="email" placeholder="Enter your email" required>
         </div>
 
-        <input type="hidden" id="title" value="Layout Plan Request" />
 
         <button type="submit" class="submit-btn">Submit</button>
       </form>
@@ -57,20 +56,15 @@
     </div>
   </div>
 
-  <!-- ✅ Latest EmailJS Script -->
- <!-- ✅ Load latest EmailJS non-module version -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 
 <script>
-  emailjs.init('f3dQtlNP9isSzVohF'); // your Public Key
-
   document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
 
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
     const email = document.getElementById('email').value;
-    const title = document.getElementById('title').value;
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^[0-9]{10,15}$/;
@@ -90,23 +84,29 @@
       return;
     }
 
-    emailjs.send("service_7k1ebsc", "template_ffjm6j9", {
-      from_name: name,
-      phone_number: phone,
-      email_address: email,
-      title: title
-    }).then(
-      function (response) {
-        alert('Form submitted successfully! We will contact you soon.');
-        document.getElementById('contact-form').reset();
+    fetch("https://script.google.com/macros/s/AKfycbyFd8zoP4Djx_y1D2SkbV_ayDkZgfTvnp9UnW6qWi4dDLv87MPB-hV13NL8zDKWWSLg/exec", {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json"
       },
-      function (error) {
-        console.log("EMAILJS ERROR:", error);
-        alert('Failed to send form. Please try again.');
-      }
-    );
+      body: JSON.stringify({
+        name: name,
+        phone: phone,
+        email: email,
+      })
+    })
+    .then(() => {
+      alert('Form submitted successfully! We will contact you soon.');
+      document.getElementById('contact-form').reset();
+    })
+    .catch(err => {
+      console.error("ERROR:", err);
+      alert('Failed to send form. Please try again.');
+    });
   });
-</script> -->
+</script>
+
 
 </body>
 
